@@ -1,63 +1,232 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>野菜マッチングアプリ - プライバシーポリシー</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO Meta Tags -->
+    <title>プライバシーポリシー | 日本の野菜 - 野菜の栄養と知識を学ぶアプリ</title>
+    <meta name="description" content="「日本の野菜」アプリのプライバシーポリシー。当アプリは個人情報を取得・収集しません。ユーザーのプライバシーを最優先に考えた安全な野菜学習アプリです。">
+    <meta name="keywords" content="日本の野菜, プライバシーポリシー, 個人情報保護, 野菜アプリ, 栄養学習, 食育アプリ">
+    <meta name="author" content="Metamorph">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://keisuke9n.github.io/iOS_veg/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="プライバシーポリシー | 日本の野菜">
+    <meta property="og:description" content="「日本の野菜」アプリのプライバシーポリシー。個人情報を取得しない安全な野菜学習アプリです。">
+    <meta property="og:url" content="https://keisuke9n.github.io/iOS_veg/">
+    <meta property="og:site_name" content="日本の野菜">
+    <meta property="og:locale" content="ja_JP">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="プライバシーポリシー | 日本の野菜">
+    <meta name="twitter:description" content="「日本の野菜」アプリのプライバシーポリシー。個人情報を取得しない安全な野菜学習アプリです。">
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "プライバシーポリシー",
+        "description": "日本の野菜アプリのプライバシーポリシー",
+        "url": "https://keisuke9n.github.io/iOS_veg/",
+        "inLanguage": "ja",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Metamorph",
+            "email": "keisuke9n@gmail.com"
+        },
+        "datePublished": "2025-01-01",
+        "dateModified": "2025-08-29",
+        "mainEntity": {
+            "@type": "MobileApplication",
+            "name": "日本の野菜",
+            "operatingSystem": "iOS, Android",
+            "applicationCategory": "EducationApplication",
+            "description": "野菜の栄養と知識を学ぶ教育アプリ"
+        }
+    }
+    </script>
+    
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
-            font-family: "Helvetica Neue", sans-serif;
-            margin: 40px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "メイリオ", sans-serif;
             line-height: 1.8;
             background-color: #f9f9f9;
             color: #333;
+            padding: 20px;
         }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        header {
+            margin-bottom: 30px;
+        }
+        
         h1 {
             color: #2e7d32;
-            border-bottom: 2px solid #ccc;
-            padding-bottom: 5px;
+            border-bottom: 3px solid #4caf50;
+            padding-bottom: 10px;
+            font-size: 2em;
+            margin-bottom: 20px;
         }
+        
         h2 {
             color: #388e3c;
-            margin-top: 30px;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            font-size: 1.5em;
         }
+        
         p {
-            margin: 10px 0;
+            margin: 15px 0;
+            text-align: justify;
         }
-        footer {
-            margin-top: 40px;
+        
+        ul {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        .contact-info {
+            background-color: #f1f8f4;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        
+        .last-updated {
+            color: #666;
             font-size: 0.9em;
-            color: #777;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 2px solid #e0e0e0;
+            text-align: center;
+            color: #666;
+        }
+        
+        .app-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        .app-link:hover {
+            background-color: #45a049;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+            h2 {
+                font-size: 1.2em;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>プライバシーポリシー</h1>
-    <p>「野菜マッチングアプリ」（以下、「本アプリ」といいます）は、ユーザーのプライバシーを尊重し、個人情報の保護に努めています。本ポリシーは、本アプリが取得する情報、その利用方法、および管理方法について説明するものです。</p>
-
-    <h2>1. 取得する情報</h2>
-    <p>本アプリは以下の情報を取得することがあります：</p>
-    <ul>
-        <li>なし</li>
-    </ul>
-
-    <h2>2. 情報の利用目的</h2>
-    <p>取得した情報は以下の目的で利用されます：</p>
-    <ul>
-        <li>なし</li>
-
-    </ul>
-
-    <h2>3. 第三者への提供</h2>
-    <p>本アプリは、取得した情報を第三者に提供することはありません。ただし、法令に基づく場合を除きます。</p>
-
-    <h2>4. お問い合わせ</h2>
-    <p>ご不明点やご質問がございましたら、以下の連絡先までご連絡ください：</p>
-    <p>運営者：Metamorph<br>
-       連絡先：keisuke9n@gmail.com</p>
-
-    <footer>
-        © Metamorph
-    </footer>
+    <div class="container">
+        <header>
+            <h1>プライバシーポリシー</h1>
+        </header>
+        
+        <main>
+            <section aria-label="概要">
+                <p>「日本の野菜」（以下、「本アプリ」といいます）は、ユーザーのプライバシーを尊重し、個人情報の保護に努めています。本ポリシーは、本アプリが取得する情報、その利用方法、および管理方法について説明するものです。</p>
+            </section>
+            
+            <section aria-label="取得する情報">
+                <h2>1. 取得する情報</h2>
+                <p>本アプリは以下の情報を取得することがあります：</p>
+                <ul>
+                    <li><strong>個人情報の取得はありません</strong> - 本アプリはユーザーの個人情報を一切取得・収集いたしません</li>
+                </ul>
+            </section>
+            
+            <section aria-label="情報の利用目的">
+                <h2>2. 情報の利用目的</h2>
+                <p>取得した情報は以下の目的で利用されます：</p>
+                <ul>
+                    <li><strong>該当なし</strong> - 個人情報を取得しないため、利用目的もございません</li>
+                </ul>
+            </section>
+            
+            <section aria-label="第三者への提供">
+                <h2>3. 第三者への提供</h2>
+                <p>本アプリは、取得した情報を第三者に提供することはありません。ただし、法令に基づく場合を除きます。</p>
+            </section>
+            
+            <section aria-label="データセキュリティ">
+                <h2>4. データセキュリティ</h2>
+                <p>本アプリは個人情報を取得しないため、データ漏洩のリスクはございません。安心してご利用いただけます。</p>
+            </section>
+            
+            <section aria-label="ポリシーの変更">
+                <h2>5. プライバシーポリシーの変更</h2>
+                <p>本ポリシーは、必要に応じて変更されることがあります。変更があった場合は、アプリ内またはウェブサイトでお知らせいたします。</p>
+            </section>
+            
+            <section aria-label="お問い合わせ">
+                <h2>6. お問い合わせ</h2>
+                <div class="contact-info">
+                    <p>ご不明点やご質問がございましたら、以下の連絡先までご連絡ください：</p>
+                    <address>
+                        <strong>運営者：</strong>Metamorph<br>
+                        <strong>メールアドレス：</strong><a href="mailto:keisuke9n@gmail.com">keisuke9n@gmail.com</a>
+                    </address>
+                </div>
+            </section>
+            
+            <div class="last-updated">
+                <p>最終更新日：2025年8月29日</p>
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 Metamorph. All rights reserved.</p>
+            <nav aria-label="関連リンク">
+                <a href="https://apps.apple.com/jp/app/%E6%97%A5%E6%9C%AC%E3%81%AE%E9%87%8E%E8%8F%9C/id6748180008" class="app-link" aria-label="アプリトップページへ">日本の野菜アプリへ戻る</a>
+            </nav>
+        </footer>
+    </div>
 </body>
 </html>
