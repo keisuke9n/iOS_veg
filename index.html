@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+
     <!-- SEO Meta Tags -->
     <title>プライバシーポリシー | 日本の野菜 - 野菜の栄養と知識を学ぶアプリ</title>
     <meta name="description" content="「日本の野菜」アプリのプライバシーポリシー。当アプリは個人情報を取得・収集しません。ユーザーのプライバシーを最優先に考えた安全な野菜学習アプリです。">
@@ -12,7 +12,7 @@
     <meta name="author" content="Metamorph">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://keisuke9n.github.io/iOS_veg/">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="プライバシーポリシー | 日本の野菜">
@@ -20,12 +20,17 @@
     <meta property="og:url" content="https://keisuke9n.github.io/iOS_veg/">
     <meta property="og:site_name" content="日本の野菜">
     <meta property="og:locale" content="ja_JP">
-    
+
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="プライバシーポリシー | 日本の野菜">
     <meta name="twitter:description" content="「日本の野菜」アプリのプライバシーポリシー。個人情報を取得しない安全な野菜学習アプリです。">
-    
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
     {
@@ -51,176 +56,435 @@
         }
     }
     </script>
-    
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        /* ============================================================
+           日本の野菜 — Privacy Policy
+           Design tokens: 畑のスペクトラム (vegetable spectrum)
+           ============================================================ */
+        :root {
+            /* 野菜由来のパレット */
+            --komatsuna: #2F7D4F;   /* 小松菜 — primary / trust */
+            --komatsuna-deep: #1F5A38;
+            --ninjin: #E8722A;      /* にんじん */
+            --kabocha: #E0A32E;     /* かぼちゃ */
+            --tomato: #D2453B;      /* トマト */
+            --nasu: #5B3A6E;        /* なす */
+            --daikon: #FBFAF5;      /* だいこん — surface */
+            --soil: #24312A;        /* 土 — ink */
+            --soil-soft: #5C6B61;
+            --field: #F4F2E9;       /* 畑 — page background */
+            --sprout-bg: #EDF5EF;   /* 若芽 — tint surface */
+            --line: #E3E0D4;
+
+            --font-display: "Zen Kaku Gothic New", "Hiragino Sans", sans-serif;
+            --font-body: "Noto Sans JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN", sans-serif;
+
+            --radius: 14px;
+            --shadow: 0 8px 30px rgba(36, 49, 42, 0.07);
         }
-        
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "メイリオ", sans-serif;
-            line-height: 1.8;
-            background-color: #f9f9f9;
-            color: #333;
-            padding: 20px;
+            font-family: var(--font-body);
+            background-color: var(--field);
+            background-image: radial-gradient(rgba(47, 125, 79, 0.055) 1px, transparent 1px);
+            background-size: 22px 22px;
+            color: var(--soil);
+            line-height: 1.9;
+            padding: 48px 20px 64px;
+            -webkit-font-smoothing: antialiased;
         }
-        
+
         .container {
-            max-width: 800px;
+            max-width: 780px;
             margin: 0 auto;
-            background: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            background: var(--daikon);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
         }
-        
-        header {
-            margin-bottom: 30px;
+
+        /* ---- 野菜スペクトラム（signature） ---- */
+        .spectrum {
+            height: 7px;
+            background: linear-gradient(
+                90deg,
+                var(--komatsuna) 0 20%,
+                var(--kabocha) 20% 40%,
+                var(--ninjin) 40% 60%,
+                var(--tomato) 60% 80%,
+                var(--nasu) 80% 100%
+            );
         }
-        
+
+        .inner { padding: 48px 52px 40px; }
+
+        /* ---- ヘッダー ---- */
+        header { margin-bottom: 36px; }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: var(--font-display);
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            color: var(--komatsuna);
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+        .eyebrow::before {
+            content: "";
+            width: 22px;
+            height: 2px;
+            background: var(--komatsuna);
+            border-radius: 2px;
+        }
+
         h1 {
-            color: #2e7d32;
-            border-bottom: 3px solid #4caf50;
-            padding-bottom: 10px;
-            font-size: 2em;
-            margin-bottom: 20px;
+            font-family: var(--font-display);
+            font-weight: 900;
+            font-size: clamp(1.7rem, 4.5vw, 2.3rem);
+            line-height: 1.35;
+            letter-spacing: 0.02em;
+            color: var(--soil);
         }
-        
+
+        .app-name {
+            margin-top: 8px;
+            font-size: 0.95rem;
+            color: var(--soil-soft);
+            font-weight: 500;
+        }
+
+        /* ---- トラストステートメント ---- */
+        .trust-hero {
+            background: linear-gradient(135deg, var(--sprout-bg), #F6FBF4);
+            border: 1.5px solid rgba(47, 125, 79, 0.25);
+            border-radius: var(--radius);
+            padding: 28px 30px;
+            margin-bottom: 44px;
+        }
+
+        .trust-hero p.statement {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: clamp(1.05rem, 2.8vw, 1.25rem);
+            color: var(--komatsuna-deep);
+            line-height: 1.7;
+            margin: 0 0 18px;
+        }
+
+        .trust-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .trust-chips li {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: #fff;
+            border: 1px solid rgba(47, 125, 79, 0.28);
+            border-radius: 999px;
+            padding: 6px 16px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--komatsuna-deep);
+            margin: 0;
+        }
+
+        .trust-chips li::before {
+            content: "✓";
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 17px;
+            height: 17px;
+            border-radius: 50%;
+            background: var(--komatsuna);
+            color: #fff;
+            font-size: 0.65rem;
+            font-weight: 900;
+        }
+
+        /* ---- セクション ---- */
+        section.policy {
+            margin-bottom: 38px;
+            padding-left: 18px;
+            border-left: 3px solid var(--accent, var(--komatsuna));
+        }
+
+        /* 条ごとに野菜の色を割り当て */
+        section.policy:nth-of-type(1) { --accent: var(--komatsuna); }
+        section.policy:nth-of-type(2) { --accent: var(--kabocha); }
+        section.policy:nth-of-type(3) { --accent: var(--ninjin); }
+        section.policy:nth-of-type(4) { --accent: var(--tomato); }
+        section.policy:nth-of-type(5) { --accent: var(--nasu); }
+        section.policy:nth-of-type(6) { --accent: var(--komatsuna-deep); }
+
+        .sec-head {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .sec-num {
+            font-family: var(--font-display);
+            font-weight: 900;
+            font-size: 0.85rem;
+            color: #fff;
+            background: var(--accent, var(--komatsuna));
+            border-radius: 6px;
+            padding: 2px 9px;
+            line-height: 1.6;
+            flex-shrink: 0;
+        }
+
         h2 {
-            color: #388e3c;
-            margin-top: 35px;
-            margin-bottom: 15px;
-            font-size: 1.5em;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.22rem;
+            color: var(--soil);
+            letter-spacing: 0.02em;
         }
-        
-        p {
-            margin: 15px 0;
-            text-align: justify;
+
+        section.policy p { margin: 10px 0; }
+
+        ul.policy-list {
+            margin: 12px 0;
+            padding-left: 0;
+            list-style: none;
         }
-        
-        ul {
-            margin: 15px 0;
-            padding-left: 30px;
-        }
-        
-        li {
+
+        ul.policy-list li {
+            position: relative;
+            padding: 12px 16px 12px 40px;
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 10px;
             margin: 8px 0;
         }
-        
+
+        ul.policy-list li::before {
+            content: "";
+            position: absolute;
+            left: 16px;
+            top: 1.35em;
+            width: 9px;
+            height: 9px;
+            border-radius: 50% 50% 50% 2px; /* 種のかたち */
+            background: var(--accent, var(--komatsuna));
+            transform: rotate(45deg);
+        }
+
+        strong { color: var(--soil); font-weight: 700; }
+
+        /* ---- お問い合わせ ---- */
         .contact-info {
-            background-color: #f1f8f4;
-            padding: 20px;
-            border-radius: 5px;
-            margin: 20px 0;
+            background: var(--sprout-bg);
+            border: 1px solid rgba(47, 125, 79, 0.18);
+            border-radius: var(--radius);
+            padding: 22px 26px;
+            margin: 16px 0 0;
         }
-        
+
+        address { font-style: normal; margin-top: 8px; }
+
+        a { color: var(--komatsuna-deep); text-decoration-thickness: 1.5px; text-underline-offset: 3px; }
+        a:hover { color: var(--komatsuna); }
+        a:focus-visible {
+            outline: 3px solid var(--kabocha);
+            outline-offset: 3px;
+            border-radius: 4px;
+        }
+
+        /* ---- 更新日 ---- */
         .last-updated {
-            color: #666;
-            font-size: 0.9em;
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #e0e0e0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--soil-soft);
+            font-size: 0.88rem;
+            margin-top: 44px;
+            padding-top: 22px;
+            border-top: 1px solid var(--line);
         }
-        
+
+        .last-updated::before {
+            content: "";
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: conic-gradient(
+                var(--komatsuna) 0 72deg,
+                var(--kabocha) 72deg 144deg,
+                var(--ninjin) 144deg 216deg,
+                var(--tomato) 216deg 288deg,
+                var(--nasu) 288deg 360deg
+            );
+        }
+
+        /* ---- フッター ---- */
         footer {
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 2px solid #e0e0e0;
+            background: var(--soil);
+            color: #E9EFE9;
             text-align: center;
-            color: #666;
+            padding: 34px 24px 38px;
         }
-        
+
+        footer p { font-size: 0.85rem; opacity: 0.85; }
+
         .app-link {
             display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #4caf50;
-            color: white;
+            margin-top: 18px;
+            padding: 13px 30px;
+            background: var(--komatsuna);
+            color: #fff;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 0.95rem;
+            letter-spacing: 0.04em;
             text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
+            border-radius: 999px;
+            transition: background-color 0.25s ease, transform 0.25s ease;
         }
-        
+
         .app-link:hover {
-            background-color: #45a049;
+            background: var(--komatsuna-deep);
+            color: #fff;
+            transform: translateY(-2px);
         }
-        
-        @media (max-width: 768px) {
-            body {
-                padding: 10px;
+
+        .app-link:focus-visible {
+            outline: 3px solid var(--kabocha);
+            outline-offset: 3px;
+        }
+
+        /* ---- 出現アニメーション ---- */
+        @media (prefers-reduced-motion: no-preference) {
+            .inner > * {
+                animation: rise 0.6s ease both;
             }
-            .container {
-                padding: 20px;
+            .inner > *:nth-child(1) { animation-delay: 0.05s; }
+            .inner > *:nth-child(2) { animation-delay: 0.12s; }
+            .inner > *:nth-child(3) { animation-delay: 0.19s; }
+            @keyframes rise {
+                from { opacity: 0; transform: translateY(10px); }
+                to   { opacity: 1; transform: translateY(0); }
             }
-            h1 {
-                font-size: 1.5em;
-            }
-            h2 {
-                font-size: 1.2em;
-            }
+        }
+
+        /* ---- レスポンシブ ---- */
+        @media (max-width: 640px) {
+            body { padding: 20px 12px 40px; }
+            .inner { padding: 32px 22px 30px; }
+            section.policy { padding-left: 14px; }
+            .trust-hero { padding: 22px 20px; }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>プライバシーポリシー</h1>
-        </header>
-        
-        <main>
-            <section aria-label="概要">
-                <p>「日本の野菜」（以下、「本アプリ」といいます）は、ユーザーのプライバシーを尊重し、個人情報の保護に努めています。本ポリシーは、本アプリが取得する情報、その利用方法、および管理方法について説明するものです。</p>
-            </section>
-            
-            <section aria-label="取得する情報">
-                <h2>1. 取得する情報</h2>
-                <p>本アプリは以下の情報を取得することがあります：</p>
-                <ul>
-                    <li><strong>個人情報の取得はありません</strong> - 本アプリはユーザーの個人情報を一切取得・収集いたしません</li>
+        <div class="spectrum" aria-hidden="true"></div>
+
+        <div class="inner">
+            <header>
+                <p class="eyebrow">Privacy Policy</p>
+                <h1>プライバシーポリシー</h1>
+                <p class="app-name">野菜の栄養と知識を学ぶアプリ「日本の野菜」</p>
+            </header>
+
+            <div class="trust-hero" role="note" aria-label="重要なお知らせ">
+                <p class="statement">本アプリは、ユーザーの個人情報を一切取得・収集しません。</p>
+                <ul class="trust-chips">
+                    <li>個人情報を取得しない</li>
+                    <li>外部に送信しない</li>
+                    <li>第三者に提供しない</li>
                 </ul>
-            </section>
-            
-            <section aria-label="情報の利用目的">
-                <h2>2. 情報の利用目的</h2>
-                <p>取得した情報は以下の目的で利用されます：</p>
-                <ul>
-                    <li><strong>該当なし</strong> - 個人情報を取得しないため、利用目的もございません</li>
-                </ul>
-            </section>
-            
-            <section aria-label="第三者への提供">
-                <h2>3. 第三者への提供</h2>
-                <p>本アプリは、取得した情報を第三者に提供することはありません。ただし、法令に基づく場合を除きます。</p>
-            </section>
-            
-            <section aria-label="データセキュリティ">
-                <h2>4. データセキュリティ</h2>
-                <p>本アプリは個人情報を取得しないため、データ漏洩のリスクはございません。安心してご利用いただけます。</p>
-            </section>
-            
-            <section aria-label="ポリシーの変更">
-                <h2>5. プライバシーポリシーの変更</h2>
-                <p>本ポリシーは、必要に応じて変更されることがあります。変更があった場合は、アプリ内またはウェブサイトでお知らせいたします。</p>
-            </section>
-            
-            <section aria-label="お問い合わせ">
-                <h2>6. お問い合わせ</h2>
-                <div class="contact-info">
-                    <p>ご不明点やご質問がございましたら、以下の連絡先までご連絡ください：</p>
-                    <address>
-                        <strong>運営者：</strong>Metamorph<br>
-                        <strong>メールアドレス：</strong><a href="mailto:keisuke9n@gmail.com">keisuke9n@gmail.com</a>
-                    </address>
-                </div>
-            </section>
-            
-            <div class="last-updated">
-                <p>最終更新日：2025年8月29日</p>
             </div>
-        </main>
-        
+
+            <main>
+                <section aria-label="概要">
+                    <p>「日本の野菜」（以下、「本アプリ」といいます）は、ユーザーのプライバシーを尊重し、個人情報の保護に努めています。本ポリシーは、本アプリが取得する情報、その利用方法、および管理方法について説明するものです。</p>
+                </section>
+
+                <section class="policy" aria-label="取得する情報">
+                    <div class="sec-head">
+                        <span class="sec-num">1</span>
+                        <h2>取得する情報</h2>
+                    </div>
+                    <p>本アプリは以下の情報を取得することがあります：</p>
+                    <ul class="policy-list">
+                        <li><strong>個人情報の取得はありません</strong> — 本アプリはユーザーの個人情報を一切取得・収集いたしません</li>
+                    </ul>
+                </section>
+
+                <section class="policy" aria-label="情報の利用目的">
+                    <div class="sec-head">
+                        <span class="sec-num">2</span>
+                        <h2>情報の利用目的</h2>
+                    </div>
+                    <p>取得した情報は以下の目的で利用されます：</p>
+                    <ul class="policy-list">
+                        <li><strong>該当なし</strong> — 個人情報を取得しないため、利用目的もございません</li>
+                    </ul>
+                </section>
+
+                <section class="policy" aria-label="第三者への提供">
+                    <div class="sec-head">
+                        <span class="sec-num">3</span>
+                        <h2>第三者への提供</h2>
+                    </div>
+                    <p>本アプリは、取得した情報を第三者に提供することはありません。ただし、法令に基づく場合を除きます。</p>
+                </section>
+
+                <section class="policy" aria-label="データセキュリティ">
+                    <div class="sec-head">
+                        <span class="sec-num">4</span>
+                        <h2>データセキュリティ</h2>
+                    </div>
+                    <p>本アプリは個人情報を取得しないため、データ漏洩のリスクはございません。安心してご利用いただけます。</p>
+                </section>
+
+                <section class="policy" aria-label="ポリシーの変更">
+                    <div class="sec-head">
+                        <span class="sec-num">5</span>
+                        <h2>プライバシーポリシーの変更</h2>
+                    </div>
+                    <p>本ポリシーは、必要に応じて変更されることがあります。変更があった場合は、アプリ内またはウェブサイトでお知らせいたします。</p>
+                </section>
+
+                <section class="policy" aria-label="お問い合わせ">
+                    <div class="sec-head">
+                        <span class="sec-num">6</span>
+                        <h2>お問い合わせ</h2>
+                    </div>
+                    <div class="contact-info">
+                        <p>ご不明点やご質問がございましたら、以下の連絡先までご連絡ください：</p>
+                        <address>
+                            <strong>運営者：</strong>Metamorph<br>
+                            <strong>メールアドレス：</strong><a href="mailto:keisuke9n@gmail.com">keisuke9n@gmail.com</a>
+                        </address>
+                    </div>
+                </section>
+
+                <div class="last-updated">
+                    <p>最終更新日：2025年8月29日</p>
+                </div>
+            </main>
+        </div>
+
         <footer>
             <p>&copy; 2025 Metamorph. All rights reserved.</p>
             <nav aria-label="関連リンク">
